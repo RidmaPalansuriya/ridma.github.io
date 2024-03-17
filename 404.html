@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid"></div>
+    <script>
+        var i = 0;
+        while (i < 1000) {
+            i++;
+            var cell = document.createElement("div");
+            cell.classList.add("cell");
+            document.querySelector(".grid").appendChild(cell);
+        }
+    </script>
+
+<style>
+    background: black
+    :root {
+        --color-primary: white;
+        --color-secondary: #b3a2ba;
+        --radius: 20%;
+        --number: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(100, 1fr);
+        gap: 0rem;
+        animation: grid 5s 0.2s ease-in-out infinite;
+        position: absolute;
+        mix-blend-mode: darken;
+        pointer-events: none;
+        height: 100vh;
+        width: 100vw;
+        place-items: center;
+        background: #111;
+        font-weight: bold;
+        font-family: "Kablammo", Helvetica, sans-serif;
+        font-variation-settings: "MORF" var(--number);
+        overflow: hidden;
+    }
+
+    @keyframes grid {
+        from {
+            --radius: 20%;
+            gap: 0rem;
+        }
+
+        50% {
+            --radius: 50%;
+            gap: 30vmin;
+            transform: rotate(360deg);
+        }
+
+        55% {
+            --radius: 30%;
+            transform: rotate(160deg);
+        }
+
+        60% {
+            transform: rotate(360deg);
+        }
+
+        70% {
+            transform: rotate(0deg);
+            gap: 0rem;
+        }
+
+        90% {
+            transform: rotate(160deg);
+        }
+
+        to {
+            --radius: 20%;
+            gap: 0rem;
+        }
+    }
+
+    .cell {
+        border-radius: var(--radius);
+        min-width: 3.5rem;
+        aspect-ratio: 1;
+        background: var(--color-secondary);
+    }
+
+    .grid:after {
+        content: "404";
+        font-size: 35vmin;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        color: var(--color-primary);
+        z-index: -1;
+        text-shadow: -1px -1px 1px white, 1px 1px 1px black,
+            0.5rem 0.5rem 4.04rem color-mix(in oklch, var(--color-primary), rgba(255, 255, 255, 0.1) 70%);
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+
+
+@keyframes text {
+        @for $i from 0 through 50 {
+            #{$i}% {
+                --number: #{$i};
+            }
+        }
+
+        @for $i from 50 through 0 {
+            #{100 - $i}% {
+                --number: #{$i};
+            }
+        }
+    }
+
+</style>
+
+</body>
+</html>
