@@ -225,51 +225,123 @@
     </div>
   </section>
 
-
-<!--==========================
-Certifications Section
-============================-->
-<section id="certificates">
+<!-- Certifications Section -->
+<section id="portfolio">
   <div class="container wow fadeInUp">
-    <div class="row">
-      <div class="col-md-6">
-        <h3 class="section-title"> Professional Certifications</h3>
-        <div class="section-title-divider"></div>
-        <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="member">
-          <div class="pic"><img src="img/c-uiux.png" alt=""></div>
-          <h4>Google UX Design Professional Certificate</h4>
-          <span> March, 2024 </span>
+    <section id="certificates">
+      <div class="container wow fadeInUp">
+        <div class="row justify-content-center"> <!-- Center the main container -->
+          <h3 class="section-title">Professional Certifications</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div class="member">
-          <div class="pic"><img src="img/c-meta.png" alt=""></div>
-          <h4>Meta Front-End Developer Professional Certificate</h4>
-          <span> July, 2023</span>
+      <div class="row justify-content-center"> <!-- Center the certification items -->
+        <!-- First Certification Item -->
+        <div class="c-item">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="pic"><img src="img/c-uiux.png" alt=""></div>
+            </div>
+            <div class="col-md-6">
+              <h4>Google UX Design Professional Certificate</h4>
+              <span>March, 2024</span>
+              <p>Description of the first certificate goes here...</p>
+              <button type="button" class="btn btn-lg btn-block btn-custom" onclick="openOverlay('google_uiux.jpg')">Details</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Second Certification Item -->
+        <div class="c-item">
+          <div class="row">
+            <div class="col-md-6 order-md-2">
+              <div class="pic"><img src="img/c-meta.png" alt=""></div>
+            </div>
+            <div class="col-md-6 order-md-1">
+              <h4>Meta Front-End Developer Professional Certificate</h4>
+              <span>July, 2023</span>
+              <p>Description of the second certificate goes here...</p>
+              <button type="button" class="btn btn-lg btn-block btn-custom" onclick="openOverlay('meta_frontend.jpg')">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Full-screen overlay for image -->
+      <div id="overlay">
+        <span class="close" onclick="closeOverlay()">&times;</span>
+        <div class="overlay-content">
+          <img src="" alt="" id="overlayImage">
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div class="member">
-          <div class="pic"><img src="img/c-IBM.png" alt=""></div>
-          <h4>IBM Data Science Professional Certificate</h4>
-          <span>June, 2022</span>
+      <div class="row justify-content-center"> <!-- Center the "View More Certificates" button -->
+        <div class="col-md-6 text-center">
+          <a href="certificates.html" class="btn btn-primary">View More Certificates</a>
         </div>
       </div>
-    </div>
+    </section>
   </div>
+</section>
+
 
 <!--==========================
   Skills Section
   ============================-->
-  
+  <div class="skills">
+    <div class="marquee">
+  <div class="marquee__group">
+    <img src="img/c-IBM.png" alt="">
+    <img src="img/c-meta.jfif" alt="">
+    <img src="img/Logo.png" alt="">
+    <img src="img/RK.png" alt="">
+    <img src="img/subscribe-bg.jpg" alt="">
+  </div>
+  <div class="marquee__group">
+    <img src="img/c-IBM.png" alt="">
+    <img src="img/c-meta.jfif" alt="">
+    <img src="img/Logo.png" alt="">
+    <img src="img/RK.png" alt="">
+    <img src="img/subscribe-bg.jpg" alt="">
+  </div>
+</div>
+
+<div class="marquee marquee--borders">
+  <div class="marquee__group">
+    <p>Lorem ipsum dolor sit amet</p>
+    <p aria-hidden="true">Consectetur adipiscing elit</p>
+    <p aria-hidden="true">Sed do eiusmod tempor incididunt ut labore</p>
+  </div>
+  <div class="marquee__group">
+    <p>Ut enim ad minim veniam</p>
+    <p>Quis nostrud exercitation ullamco laboris nisi</p>
+    <p>Duis aute irure dolor in reprehenderit</p>
+  </div>
+</div>
+
+<div class="marquee marquee--reverse">
+  <div class="marquee__group">
+    <img src="img/c-IBM.png" alt="">
+    <img src="img/c-meta.jfif" alt="">
+    <img src="img/Logo.png" alt="">
+    <img src="img/RK.png" alt="">
+    <img src="img/subscribe-bg.jpg" alt="">
+  </div>
+  <div class="marquee__group">
+    <img src="img/c-IBM.png" alt="">
+    <img src="img/c-meta.jfif" alt="">
+    <img src="img/Logo.png" alt="">
+    <img src="img/RK.png" alt="">
+    <img src="img/subscribe-bg.jpg" alt="">
+  </div>
+</div>
+  </div>
+
+
+
+<!-- 
       <div class="gallery">
         
         <div class="left">
@@ -294,7 +366,7 @@ Certifications Section
           </div>
         </div>
       </div>
-
+ -->
 
   
   <!--==========================

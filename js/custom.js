@@ -220,3 +220,47 @@ const leftPerspectives = [
   
   loop();
   
+
+
+  
+  function openOverlay(imageSrc) {
+    document.getElementById('overlay').style.display = "block";
+    document.getElementById('overlayImage').src = imageSrc;
+  }
+
+  function closeOverlay() {
+    document.getElementById('overlay').style.display = "none";
+  }
+
+
+  const marquees = document.querySelectorAll('.marquee');
+
+  marquees.forEach(marquee => {
+    const marqueeSpeed = 50; // Adjust scrolling speed (lower is faster)
+    let timer;
+  
+    marquee.addEventListener('mouseenter', () => {
+      clearInterval(timer);
+    });
+  
+    marquee.addEventListener('mouseleave', () => {
+      timer = startScrolling(marquee, marqueeSpeed);
+    });
+  
+    timer = startScrolling(marquee, marqueeSpeed);
+  
+    marquee.addEventListener('mouseover', () => {
+      marquee.style.animationPlayState = 'paused';
+    });
+  
+    marquee.addEventListener('mouseout', () => {
+      marquee.style.animationPlayState = 'running';
+    });
+  });
+  
+  function startScrolling(marquee, speed) {
+    return setInterval(() => {
+      marquee.scrollLeft -= 1; // Decrement scrollLeft for reverse horizontal scrolling
+    }, speed);
+  }
+  
