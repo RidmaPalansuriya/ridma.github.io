@@ -1354,14 +1354,14 @@ body {
 .marquee {
   vertical-align:-webkit-baseline-middle;
   display: flex;
-  height: 127px;
+  height: 80px;
   width: auto;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
   box-sizing: border-box;
-  background-color: #f7f7f78d;
-  border: 1px solid #00b21b;
+  background-color: #1916168d;
+  border: 0px solid #00b21b;
   padding: 10px 0;
   margin-bottom: 20px;
 
@@ -1371,7 +1371,7 @@ body {
   animation: marquee-animation 20s linear infinite; /* Adjust speed and timing as needed */
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 20s linear infinite;
+  animation: marquee 15s linear infinite;
 }
 
 .marquee img {
