@@ -528,6 +528,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 80px 0 60px 0;
 }
 
+.fa fa-mobile{
+  
+}
+
 #services .service-item {
   margin-bottom: 20px;
 }
@@ -1357,7 +1361,7 @@ body {
   position: relative;
   box-sizing: border-box;
   background-color: #f7f7f78d;
-  border: 0px solid #00b21b;
+  border: 1px solid #00b21b;
   padding: 10px 0;
   margin-bottom: 20px;
 
@@ -1432,6 +1436,8 @@ body {
 }
 
 /* Customize marquee animation if needed */
+
+
 
 
 

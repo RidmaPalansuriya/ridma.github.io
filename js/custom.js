@@ -264,3 +264,19 @@ const leftPerspectives = [
     }, speed);
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
