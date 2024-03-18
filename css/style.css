@@ -1355,7 +1355,7 @@ body {
   vertical-align:-webkit-baseline-middle;
   display: flex;
   height: 80px;
-  width: auto;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -1367,11 +1367,45 @@ body {
 
 }
 
+
+
+/* Left Scroll Marquee */
 .marquee__group {
-  animation: marquee-animation 20s linear infinite; /* Adjust speed and timing as needed */
-  display: inline-block;
+  display:inline-block;
   white-space: nowrap;
-  animation: marquee 15s linear infinite;
+  animation: marqueeLeft 30s linear infinite; /* Adjust animation duration as needed */
+}
+
+/* Right Scroll Marquee */
+.marquee--reverse .marquee__group {
+  /* display: inline-block; */
+  display:inline-block;
+  white-space: nowrap;
+  animation: marqueeRight 30s linear infinite; /* Adjust animation duration as needed */
+}
+
+/* Pause animation on hover */
+.marquee:hover .marquee__group {
+  animation-play-state: paused;
+}
+
+
+/* Resume animation for the next group */
+.marquee:hover .marquee__group:nth-child(odd) {
+  animation-delay: -15s; /* Half the duration of the animation to start immediately */
+}
+
+
+/* Keyframes for Left Scroll */
+@keyframes marqueeLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Keyframes for Right Scroll */
+@keyframes marqueeRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .marquee img {
@@ -1381,7 +1415,7 @@ body {
 }
 
 
-@keyframes fade {
+/* @keyframes fade {
   to {
     opacity: 0;
     visibility: hidden;
@@ -1395,12 +1429,12 @@ body {
   100% {
     transform: translateX(calc(-100% - 20px)); /* Adjust based on image width and margin */
   }
-}
+} */
 
-@keyframes marquee {
+/* @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
-}
+} */
 
 
 
